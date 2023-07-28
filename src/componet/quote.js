@@ -223,16 +223,18 @@ const QuoteGenerator = () => {
         }
     }
 
+    const handleSelectChange = (event) => {
+        setSelectedCategory(event.target.value);
+      };
     const handleButtonClick = () => {
-        const categoryInput = document.getElementById('category-input').value.toLowerCase();
-        const category = quotes.find((item) => item.categories === categoryInput);
-
+        const category = quotes.find((item) => item.categories === selectedCategory);
         if (category) {
-            setDisplayedQuotes(category.quotes);
+          setDisplayedQuotes(category.quotes);
         } else {
-            setDisplayedQuotes([]);
+          setDisplayedQuotes([]);
         }
-    };
+      };
+    
     return (
         <>
             <div className='container'>
@@ -257,26 +259,29 @@ const QuoteGenerator = () => {
                 </div>
                 <div className='bg-all div-2'> <h3 className='center head '>Watch all Quotes : Available category
                     <br />(love,life,best friend , inspiration ,happines)   </h3>
-                    <div className='center '>
-                        <label htmlFor="category-input">Enter category:</label>
-                        <input type="text" id="category-input" />
-                        <button onClick={handleButtonClick}>Show Quotes</button>
+                    <div className='center'>
+            <label htmlFor="category-select">Select category:</label>
+            <select id="category-select" onChange={handleSelectChange} value={selectedCategory}>
+              <option value="all">All</option>
+              {quotes.map((category) => (
+                <option key={category.categories} value={category.categories}>
+                  {category.categories}
+                </option>
+              ))}
+            </select>
+            <button onClick={handleButtonClick}>Show Quotes</button>
 
-                        <div className="bg-2">
-                            {displayedQuotes.length > 0 ? (
-                                displayedQuotes.map((quote, index) => (
-
-                                    <div key={index} className='bg-1'>
-
-                                        <p>{quote.quote}</p>
-                                        <p>- {quote.author}</p>
-
-                                        {/* <p>Category: {quote.categories}</p> */}
-                                    </div>
-                                ))
-                            ) : (
-                                <p>No quotes found for the specified category.</p>
-                            )}
+            <div className="bg-2">
+              {displayedQuotes.length > 0 ? (
+                displayedQuotes.map((quote, index) => (
+                  <div key={index} className='bg-1'>
+                    <p>{quote.quote}</p>
+                    <p>- {quote.author}</p>
+                  </div>
+                ))
+              ) : (
+                <p>No quotes found for the specified category.</p>
+              )}
                         </div>
                     </div>
                 </div>
