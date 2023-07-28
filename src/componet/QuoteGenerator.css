@@ -65,3 +65,9 @@ background-color: #576582;
 /* .head{
     background-color: #ccc;
 } */
+.container{
+  border-collapse: collapse;
+}
+.div-1, .div-2{
+  border: 1px solid black;
+}

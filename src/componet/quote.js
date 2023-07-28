@@ -235,8 +235,8 @@ const QuoteGenerator = () => {
     };
     return (
         <>
-            <div>
-                <div className='center bg-all'>
+            <div className='container'>
+                <div className='center bg-all div-1'>
                     <h3 className=' head'>Random Quotes</h3>
                     <div>
                         {quotes.map(category => (
@@ -255,7 +255,7 @@ const QuoteGenerator = () => {
                     </blockquote>
                     <button onClick={generateQuote}>Generate Quote</button>
                 </div>
-                <div className='bg-all'> <h3 className='center head '>Watch all Quotes : Available category
+                <div className='bg-all div-2'> <h3 className='center head '>Watch all Quotes : Available category
                     <br />(love,life,best friend , inspiration ,happines)   </h3>
                     <div className='center '>
                         <label htmlFor="category-input">Enter category:</label>
