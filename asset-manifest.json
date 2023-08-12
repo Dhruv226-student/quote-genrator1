@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/quote-genrator1/static/css/main.973c5a25.css",
-    "main.js": "/quote-genrator1/static/js/main.3fd101c4.js",
+    "main.css": "/quote-genrator1/static/css/main.92c9f152.css",
+    "main.js": "/quote-genrator1/static/js/main.2475f23b.js",
     "static/js/787.32d91862.chunk.js": "/quote-genrator1/static/js/787.32d91862.chunk.js",
     "static/media/logo.svg": "/quote-genrator1/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/quote-genrator1/index.html",
-    "main.973c5a25.css.map": "/quote-genrator1/static/css/main.973c5a25.css.map",
-    "main.3fd101c4.js.map": "/quote-genrator1/static/js/main.3fd101c4.js.map",
+    "main.92c9f152.css.map": "/quote-genrator1/static/css/main.92c9f152.css.map",
+    "main.2475f23b.js.map": "/quote-genrator1/static/js/main.2475f23b.js.map",
     "787.32d91862.chunk.js.map": "/quote-genrator1/static/js/787.32d91862.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.973c5a25.css",
-    "static/js/main.3fd101c4.js"
+    "static/css/main.92c9f152.css",
+    "static/js/main.2475f23b.js"
   ]
 }
